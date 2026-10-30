@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maia3-policy-uci"
+version = "0.1.0"
+description = "Maia 3 as a UCI engine that also reports the model's probability for its move"
+readme = "README.md"
+license = { text = "AGPL-3.0-or-later" }
+requires-python = ">=3.10"
+dependencies = ["maia3"]
+
+[project.scripts]
+maia3-policy-uci = "maia3_policy_uci:main"
+
+[tool.setuptools]
+py-modules = ["maia3_policy_uci"]
